@@ -14,7 +14,7 @@ A social network API application that allows users to share their thoughts, reac
 ## Usage
 1. Download social-network repository
 2. Run <code>npm i</code> to install the dependencies
-3. Run <code>node server.js</code> to start application
+3. Run <code>npm start</code> to start application
 4. Use Insomnia Core to test API endpoints
 
 ## Demo

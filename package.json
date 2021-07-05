@@ -1,0 +1,24 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "## Description A social network API application that allows users to share their thoughts, react to friends' thoughts, and create a friend list",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akman47/social-network.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akman47/social-network/issues"
+  },
+  "homepage": "https://github.com/akman47/social-network#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  }
+}
