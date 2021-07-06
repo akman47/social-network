@@ -100,6 +100,7 @@ const userController = {
                     return res.status(404).json({ message: 'No user found with this id' });
                 }
                 const usernameDel = deletedUser.username;
+                console.log(usernameDel);
                 return Thought.deleteMany({ username: usernameDel })
             })
             .then(dbUserData => {
