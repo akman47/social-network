@@ -34,8 +34,8 @@ const ThoughtSchema = new Schema(
         thoughtText: {
             type: String,
             required: true,
-            minLength: 1,
-            maxLength: 280
+            minLength: [1, 'You must enter at least 1 character'],
+            maxLength: [280, 'Maximum text limit is 280 characters. You have {VALUE} characters']
         },
         createdAt: {
             type: Date,

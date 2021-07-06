@@ -18,7 +18,7 @@ const userController = {
                 {
                     path: 'thoughts',
                     select: '-__v'
-                }
+                },
                 // {
                 //     path: 'friends',
                 //     select: '-__v'
@@ -102,7 +102,8 @@ const userController = {
             //     if (!deletedUser) {
             //         return res.status(404).json{ message: 'No user found with this id' });
             //     }
-            //     return Thought.deleteMany({})
+            //     const usernameDel = deletedUser.username;
+            //     return Thought.deleteMany({ username: usernameDel })
             // })
             .then(dbUserData => {
                 if (!dbUserData) {

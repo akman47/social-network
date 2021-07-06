@@ -10,8 +10,14 @@ const UserSchema = new Schema(
         },
         email: {
             type: String,
-            required: true,
-            unique: true
+            required: [true, 'Email address required'],
+            unique: true,
+            validate: {
+                validator: function(e) {
+                    return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(e);
+                },
+                message: props => `${props.value} is not a valid email address!`
+            }
         },
         thoughts: [
             {
@@ -22,7 +28,7 @@ const UserSchema = new Schema(
         friends: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'User'
+                ref: 'UserSchema'
             }
         ]
     },
