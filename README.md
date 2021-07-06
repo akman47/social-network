@@ -4,6 +4,7 @@
 A social network API application that allows users to share their thoughts, react to friends' thoughts, and create a friend list
 
 ## Made With
+* JavaScript
 * MongoDB
 * Node.js
 

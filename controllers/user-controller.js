@@ -18,11 +18,11 @@ const userController = {
                 {
                     path: 'thoughts',
                     select: '-__v'
-                },
-                {
-                    path: 'friends',
-                    select: '-__v'
                 }
+                // {
+                //     path: 'friends',
+                //     select: '-__v'
+                // }
             )
             .then(dbUserData => {
                 if (!dbUserData) {
@@ -61,7 +61,7 @@ const userController = {
     addFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.userId },
-            { $push: { friends: friendId } },
+            { $push: { friends: params.friendId } },
             { new: true }
         )
         .then(dbUserData => {
