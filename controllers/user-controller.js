@@ -83,7 +83,6 @@ const userController = {
                 res.status(404).json({ message: 'No user found with this id' });
                 return;
             }
-            res.json({ message: 'Friend removed from friend list' });
             res.json(dbUserData);
         })
         .catch(err => {
@@ -100,7 +99,6 @@ const userController = {
                     return res.status(404).json({ message: 'No user found with this id' });
                 }
                 const usernameDel = deletedUser.username;
-                console.log(usernameDel);
                 return Thought.deleteMany({ username: usernameDel })
             })
             .then(dbUserData => {
